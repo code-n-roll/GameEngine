@@ -1,18 +1,27 @@
 package renderEngine
 
 import entities.Entity
-import models.RawModel
 import models.TexturedModel
 import org.lwjgl.opengl.*
 import org.lwjgl.util.vector.Matrix4f
 import shaders.StaticShader
 import toolbox.Maths
 
-class Renderer(shader: StaticShader) {
+class Render(shader: StaticShader) {
 
-    lateinit var projectionMatrix: Matrix4f
+    companion object {
+
+        private const val FOV = 70f
+        private const val NEAR_PLANE = 0.1f
+        private const val FAR_PLANE = 1000f
+    }
+
+    private lateinit var projectionMatrix: Matrix4f
+    private var shader: StaticShader = shader
 
     init {
+        GL11.glEnable(GL11.GL_CULL_FACE)
+        GL11.glCullFace(GL11.GL_BACK)
         createProjectionMatrix()
         with(shader) {
             start()
@@ -24,17 +33,45 @@ class Renderer(shader: StaticShader) {
     fun prepare() {
         GL11.glEnable(GL11.GL_DEPTH_TEST)
         GL11.glClear(GL11.GL_COLOR_BUFFER_BIT or GL11.GL_DEPTH_BUFFER_BIT)
-        GL11.glClearColor(0f, 0f, 0f, 1f)
+        GL11.glClearColor(0.3f, 0f, 0f, 1f)
     }
 
-    fun render(entity: Entity, shader: StaticShader) {
-        val model = entity.model
+    fun render(entities: Map<TexturedModel, List<Entity>>) {
+        for (model in entities.keys) {
+            prepareTexturedModel(model)
+            val batch = entities[model] as ArrayList
+            for (entity in batch) {
+                prepareInstance(entity)
+                GL11.glDrawElements(GL11.GL_TRIANGLES,
+                        model.rawModel.vertextCount,
+                        GL11.GL_UNSIGNED_INT,
+                        0)
+            }
+            unbindTexturedModel()
+        }
+    }
+
+    private fun prepareTexturedModel(model: TexturedModel) {
         val rawModel = model.rawModel
         GL30.glBindVertexArray(rawModel.vaoID)
         GL20.glEnableVertexAttribArray(0)
         GL20.glEnableVertexAttribArray(1)
         GL20.glEnableVertexAttribArray(2)
 
+        val texture = model.texture
+        shader.loadShineVariables(texture.shineDamper, texture.reflectivity)
+        GL13.glActiveTexture(GL13.GL_TEXTURE0)
+        GL11.glBindTexture(GL11.GL_TEXTURE_2D, model.texture.id)
+    }
+
+    private fun unbindTexturedModel() {
+        GL20.glDisableVertexAttribArray(0)
+        GL20.glDisableVertexAttribArray(1)
+        GL20.glDisableVertexAttribArray(2)
+        GL30.glBindVertexArray(0)
+    }
+
+    private fun prepareInstance(entity: Entity) {
         val transformationMatrix = Maths.createTransformationMatrix(
                 entity.position,
                 entity.rotX,
@@ -42,17 +79,6 @@ class Renderer(shader: StaticShader) {
                 entity.rotZ,
                 entity.scale)
         shader.loadTransformationMatrix(transformationMatrix)
-
-        GL13.glActiveTexture(GL13.GL_TEXTURE0)
-        GL11.glBindTexture(GL11.GL_TEXTURE_2D, model.texture.id)
-        GL11.glDrawElements(GL11.GL_TRIANGLES,
-                rawModel.vertextCount,
-                GL11.GL_UNSIGNED_INT,
-                0)
-        GL20.glDisableVertexAttribArray(0)
-        GL20.glDisableVertexAttribArray(1)
-        GL20.glDisableVertexAttribArray(2)
-        GL30.glBindVertexArray(0)
     }
 
     private fun createProjectionMatrix() {
@@ -68,12 +94,5 @@ class Renderer(shader: StaticShader) {
         projectionMatrix.m23 = -1f
         projectionMatrix.m32 = -(2f * NEAR_PLANE * FAR_PLANE / frustum_length)
         projectionMatrix.m33 = 0f
-    }
-
-    companion object {
-
-        private const val FOV = 70f
-        private const val NEAR_PLANE = 0.1f
-        private const val FAR_PLANE = 1000f
     }
 }

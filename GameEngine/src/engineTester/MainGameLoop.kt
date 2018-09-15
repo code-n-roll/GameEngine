@@ -6,10 +6,7 @@ import entities.Light
 import models.TexturedModel
 import org.lwjgl.opengl.Display
 import org.lwjgl.util.vector.Vector3f
-import renderEngine.DisplayManager
-import renderEngine.Loader
-import renderEngine.OBJLoader
-import renderEngine.Renderer
+import renderEngine.*
 import shaders.StaticShader
 import textures.ModelTexture
 
@@ -20,42 +17,36 @@ object MainGameLoop {
 
         DisplayManager.createDisplay()
         val loader = Loader()
-        val shader = StaticShader()
-        val renderer = Renderer(shader)
 
+        val model = OBJLoader.loadObjModel("stall", loader)
 
-        val model = OBJLoader.loadObjModel("dragon", loader)
+        val staticModel = TexturedModel(model, ModelTexture(loader.loadTexture("stallTexture")))
+        val texture = staticModel.texture
+        texture.shineDamper = 10f
+        texture.reflectivity = 1f
 
-        val texture = ModelTexture(loader.loadTexture("dragon"))
-
-        val staticModel = TexturedModel(model, texture)
 
         val entity = Entity(staticModel,
-                Vector3f(0f, -5f, -50f),
+                Vector3f(0f, 0f, -25f),
                 0f,
-                0f,
+                160f,
                 0f,
                 1f)
-        val light = Light(Vector3f(0f,0f,-20f), Vector3f(1f,1f,1f))
+        val light = Light(Vector3f(3000f,2000f,2000f), Vector3f(1f,1f,1f))
 
         val camera = Camera()
 
-
+        val renderer = MasterRender()
+        renderer.entities[staticModel] = arrayListOf(entity)
         while (!Display.isCloseRequested()) {
-            entity.increaseRotation(0f, 1f, 0f)
+            entity.increaseRotation(0f, 0f, 0f)
             camera.move()
-            renderer.prepare()
-            shader.start()
-            shader.loadLight(light)
-            shader.loadViewMatrix(camera)
-            renderer.render(entity, shader)
-            shader.stop()
+            renderer.processEntity(entity)
+            renderer.render(light, camera)
             DisplayManager.updateDisplay()
-
         }
 
-        shader.cleanUp()
-        loader.cleanUp()
+        renderer.cleanUp()
         DisplayManager.closeDisplay()
     }
 }

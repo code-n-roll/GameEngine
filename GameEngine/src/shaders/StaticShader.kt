@@ -12,6 +12,8 @@ class StaticShader : ShaderProgram(VERTEX_FILE, FRAGMENT_FILE) {
     private var location_viewMatrix: Int = 0
     private var location_lightPosition: Int = 0
     private var location_lightColor: Int = 0
+    private var location_shineDamper: Int = 0
+    private var location_reflectivity: Int = 0
 
     override fun bindAttribute() {
         super.bindAttribute(0, "position")
@@ -25,6 +27,8 @@ class StaticShader : ShaderProgram(VERTEX_FILE, FRAGMENT_FILE) {
         location_viewMatrix = super.getUniformLocation("viewMatrix")
         location_lightColor = super.getUniformLocation("lightColor")
         location_lightPosition = super.getUniformLocation("lightPosition")
+//        location_shineDamper = super.getUniformLocation("shineDamper")
+//        location_reflectivity = super.getUniformLocation("reflectivity")
     }
 
     fun loadTransformationMatrix(matrix: Matrix4f) {
@@ -43,6 +47,11 @@ class StaticShader : ShaderProgram(VERTEX_FILE, FRAGMENT_FILE) {
     fun loadLight(light: Light) {
         super.loadVector(location_lightPosition, light.position)
         super.loadVector(location_lightColor, light.color)
+    }
+
+    fun loadShineVariables(damper: Float, reflectivity: Float) {
+        super.loadFloat(location_shineDamper, damper)
+        super.loadFloat(location_reflectivity, reflectivity)
     }
 
     companion object {
