@@ -22,8 +22,8 @@ class Loader {
     private val textures = ArrayList<Int>()
 
     fun loadToVAO(positions: FloatArray,
-                  indices: IntArray,
-                  textureCoords: FloatArray): RawModel {
+                  textureCoords: FloatArray,
+                  indices: IntArray): RawModel {
         val vaoID = createVAO()
         bindIndicesBuffer(indices)
         storeDataInAttributeList(0, 3, positions)
@@ -34,7 +34,7 @@ class Loader {
 
     fun loadTexture(fileName: String): Int {
         val texture = TextureLoader.getTexture("png",
-                FileInputStream("GameEngine/res/$fileName"))
+                FileInputStream("GameEngine/res/$fileName.png"))
 
         val textureID = texture.textureID
         textures.add(textureID)
