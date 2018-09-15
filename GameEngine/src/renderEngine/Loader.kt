@@ -23,11 +23,13 @@ class Loader {
 
     fun loadToVAO(positions: FloatArray,
                   textureCoords: FloatArray,
+                  normals: FloatArray,
                   indices: IntArray): RawModel {
         val vaoID = createVAO()
         bindIndicesBuffer(indices)
         storeDataInAttributeList(0, 3, positions)
         storeDataInAttributeList(1, 2, textureCoords)
+        storeDataInAttributeList(2, 3, normals)
         unbindVAO()
         return RawModel(vaoID, indices.size)
     }

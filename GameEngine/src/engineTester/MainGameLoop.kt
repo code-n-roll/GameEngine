@@ -2,6 +2,7 @@ package engineTester
 
 import entities.Camera
 import entities.Entity
+import entities.Light
 import models.TexturedModel
 import org.lwjgl.opengl.Display
 import org.lwjgl.util.vector.Vector3f
@@ -23,9 +24,9 @@ object MainGameLoop {
         val renderer = Renderer(shader)
 
 
-        val model = OBJLoader.loadObjModel("stall", loader)
+        val model = OBJLoader.loadObjModel("dragon", loader)
 
-        val texture = ModelTexture(loader.loadTexture("stallTexture"))
+        val texture = ModelTexture(loader.loadTexture("dragon"))
 
         val staticModel = TexturedModel(model, texture)
 
@@ -35,6 +36,7 @@ object MainGameLoop {
                 0f,
                 0f,
                 1f)
+        val light = Light(Vector3f(0f,0f,-20f), Vector3f(1f,1f,1f))
 
         val camera = Camera()
 
@@ -44,6 +46,7 @@ object MainGameLoop {
             camera.move()
             renderer.prepare()
             shader.start()
+            shader.loadLight(light)
             shader.loadViewMatrix(camera)
             renderer.render(entity, shader)
             shader.stop()

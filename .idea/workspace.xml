@@ -2,19 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23ed347c-cfd1-4a91-86e8-0cc95ffbc22a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameEngine/res/stall.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameEngine/res/stallTexture.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameEngine/src/renderEngine/OBJLoader.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameEngine/res/dragon.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameEngine/src/entities/Light.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameEngine/src/engineTester/MainGameLoop.kt" beforeDir="false" afterPath="$PROJECT_DIR$/GameEngine/src/engineTester/MainGameLoop.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameEngine/src/entities/Camera.kt" beforeDir="false" afterPath="$PROJECT_DIR$/GameEngine/src/entities/Camera.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameEngine/src/renderEngine/Loader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/GameEngine/src/renderEngine/Loader.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEngine/src/renderEngine/OBJLoader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/GameEngine/src/renderEngine/OBJLoader.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameEngine/src/renderEngine/Renderer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/GameEngine/src/renderEngine/Renderer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEngine/src/shaders/StaticShader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/GameEngine/src/shaders/StaticShader.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEngine/src/shaders/fragmentShader.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GameEngine/src/shaders/fragmentShader.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEngine/src/shaders/vertexShader.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GameEngine/src/shaders/vertexShader.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GameEngine/engineTester/MainGameLoop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/engineTester/MainGameLoop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameEngine/entities/Camera.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/entities/Camera.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GameEngine/renderEngine/Loader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/renderEngine/Loader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameEngine/renderEngine/OBJLoader$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/renderEngine/OBJLoader$Companion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameEngine/renderEngine/Renderer$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/renderEngine/Renderer$Companion.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GameEngine/renderEngine/Renderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/renderEngine/Renderer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameEngine/shaders/StaticShader$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/shaders/StaticShader$Companion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameEngine/shaders/StaticShader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/shaders/StaticShader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameEngine/shaders/fragmentShader.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/shaders/fragmentShader.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameEngine/shaders/vertexShader.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/shaders/vertexShader.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,66 +50,45 @@
           <entry key="class" value="3" />
           <entry key="iml" value="1" />
           <entry key="java" value="30" />
-          <entry key="kt" value="28" />
-          <entry key="obj" value="1" />
-          <entry key="png" value="3" />
-          <entry key="txt" value="3" />
+          <entry key="kt" value="34" />
+          <entry key="obj" value="2" />
+          <entry key="png" value="6" />
+          <entry key="txt" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="3" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="Image" value="3" />
+          <entry key="Image" value="6" />
           <entry key="JAVA" value="30" />
-          <entry key="Kotlin" value="28" />
-          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="Kotlin" value="34" />
+          <entry key="PLAIN_TEXT" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="8931" />
-          <entry key="kt" value="2515" />
-          <entry key="txt" value="691" />
+          <entry key="kt" value="2952" />
+          <entry key="txt" value="1312" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="8931" />
-          <entry key="Kotlin" value="2515" />
-          <entry key="PLAIN_TEXT" value="691" />
+          <entry key="Kotlin" value="2952" />
+          <entry key="PLAIN_TEXT" value="1312" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GameEngine/src/renderEngine/Loader.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="36" column="47" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GameEngine/src/renderEngine/OBJLoader.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="85" column="37" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
-              <folding>
-                <element signature="e#22#196#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GameEngine/src/engineTester/MainGameLoop.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+            <state relative-caret-position="234">
+              <caret line="28" column="60" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="60" />
               <folding>
                 <element signature="e#22#313#0" expanded="true" />
               </folding>
@@ -112,54 +97,79 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GameEngine/src/entities/Camera.kt">
+        <entry file="file://$PROJECT_DIR$/GameEngine/src/entities/Light.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+            <state relative-caret-position="90">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GameEngine/res/stall.obj">
+        <entry file="file://$PROJECT_DIR$/GameEngine/src/shaders/vertexShader.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+            <state relative-caret-position="235">
+              <caret line="18" column="61" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GameEngine/src/renderEngine/Loader.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GameEngine/src/renderEngine/OBJLoader.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="89" column="77" selection-start-line="89" selection-start-column="77" selection-end-line="89" selection-end-column="77" />
+              <folding>
+                <element signature="e#22#196#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GameEngine/src/renderEngine/Renderer.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+            <state relative-caret-position="126">
+              <caret line="40" column="7" lean-forward="true" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GameEngine/src/entities/Entity.kt">
+        <entry file="file://$PROJECT_DIR$/GameEngine/src/shaders/fragmentShader.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-              <folding>
-                <element signature="e#18#83#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="378">
+              <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GameEngine/src/toolbox/Maths.kt">
+        <entry file="file://$PROJECT_DIR$/GameEngine/res/white.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GameEngine/src/shaders/StaticShader.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-              <folding>
-                <element signature="e#17#115#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="214">
+              <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GameEngine/res/stallTexture.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -198,6 +208,8 @@
       <find>val</find>
       <find>currentLine</find>
       <find>KEY</find>
+      <find>bind</find>
+      <find>render</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -209,37 +221,38 @@
         <option value="$PROJECT_DIR$/GameEngine/src/renderEngine/RawModel.java" />
         <option value="$PROJECT_DIR$/GameEngine/src/models/TextureModel.java" />
         <option value="$PROJECT_DIR$/GameEngine/src/textures/ModelTexture.java" />
-        <option value="$PROJECT_DIR$/GameEngine/src/shaders/fragmentShader.txt" />
         <option value="$PROJECT_DIR$/GameEngine/src/entities/Entity.java" />
         <option value="$PROJECT_DIR$/GameEngine/src/toolbox/Maths.java" />
         <option value="$PROJECT_DIR$/GameEngine/src/shaders/StaticShader.java" />
-        <option value="$PROJECT_DIR$/GameEngine/src/shaders/vertexShader.txt" />
         <option value="$PROJECT_DIR$/GameEngine/src/entities/Camera.java" />
         <option value="$PROJECT_DIR$/GameEngine/src/engineTester/MainGameLoop.java" />
         <option value="$PROJECT_DIR$/GameEngine/src/textures/ModelTexture.kt" />
         <option value="$PROJECT_DIR$/GameEngine/src/renderEngine/Loader.java" />
         <option value="$PROJECT_DIR$/GameEngine/src/renderEngine/DisplayManager.java" />
-        <option value="$PROJECT_DIR$/GameEngine/src/models/TexturedModel.kt" />
         <option value="$PROJECT_DIR$/GameEngine/src/models/RawModel.kt" />
         <option value="$PROJECT_DIR$/GameEngine/src/shaders/ShaderProgram.java" />
         <option value="$PROJECT_DIR$/GameEngine/src/renderEngine/Renderer.java" />
         <option value="$PROJECT_DIR$/GameEngine/src/entities/Entity.kt" />
         <option value="$PROJECT_DIR$/GameEngine/src/toolbox/Maths.kt" />
-        <option value="$PROJECT_DIR$/GameEngine/src/shaders/StaticShader.kt" />
         <option value="$PROJECT_DIR$/GameEngine/src/shaders/ShaderProgram.kt" />
         <option value="$PROJECT_DIR$/GameEngine/src/renderEngine/DisplayManager.kt" />
+        <option value="$PROJECT_DIR$/GameEngine/src/entities/Camera.kt" />
+        <option value="$PROJECT_DIR$/GameEngine/src/models/TexturedModel.kt" />
+        <option value="$PROJECT_DIR$/GameEngine/src/entities/Light.kt" />
         <option value="$PROJECT_DIR$/GameEngine/src/renderEngine/Loader.kt" />
         <option value="$PROJECT_DIR$/GameEngine/src/renderEngine/OBJLoader.kt" />
-        <option value="$PROJECT_DIR$/GameEngine/src/entities/Camera.kt" />
-        <option value="$PROJECT_DIR$/GameEngine/src/engineTester/MainGameLoop.kt" />
+        <option value="$PROJECT_DIR$/GameEngine/src/shaders/StaticShader.kt" />
         <option value="$PROJECT_DIR$/GameEngine/src/renderEngine/Renderer.kt" />
+        <option value="$PROJECT_DIR$/GameEngine/src/shaders/vertexShader.txt" />
+        <option value="$PROJECT_DIR$/GameEngine/src/shaders/fragmentShader.txt" />
+        <option value="$PROJECT_DIR$/GameEngine/src/engineTester/MainGameLoop.kt" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="471" />
+    <option name="x" value="683" />
     <option name="y" value="24" />
-    <option name="width" value="895" />
+    <option name="width" value="683" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -404,10 +417,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="471" y="24" width="895" height="744" extended-state="4" />
+    <frame x="683" y="24" width="683" height="744" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.057714958" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13500784" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -420,7 +433,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3282572" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.17766498" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3282572" />
@@ -512,27 +525,10 @@
     <entry file="file://$PROJECT_DIR$/GameEngine/GameEngine.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameEngine/src/shaders/fragmentShader.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="11" selection-start-column="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameEngine/res/image.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/io/BufferedReader.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="346" column="16" selection-start-line="346" selection-start-column="16" selection-end-line="346" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameEngine/src/shaders/vertexShader.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -585,20 +581,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameEngine/src/models/TexturedModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="70" selection-start-line="4" selection-start-column="70" selection-end-line="4" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameEngine/src/shaders/StaticShader.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GameEngine/src/textures/ModelTexture.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -640,24 +622,7 @@
     <entry file="file://$PROJECT_DIR$/GameEngine/res/stall.obj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
-          <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameEngine/src/renderEngine/Loader.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="36" column="47" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameEngine/src/renderEngine/OBJLoader.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="85" column="37" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
-          <folding>
-            <element signature="e#22#196#0" expanded="true" />
-          </folding>
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -685,20 +650,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameEngine/src/engineTester/MainGameLoop.kt">
+    <entry file="file://$PROJECT_DIR$/GameEngine/res/dragon.obj">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameEngine/src/models/TexturedModel.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        <state relative-caret-position="72">
+          <caret line="4" column="69" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameEngine/res/image.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameEngine/res/stallTexture.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameEngine/res/white.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameEngine/src/entities/Light.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameEngine/src/renderEngine/Loader.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameEngine/src/renderEngine/OBJLoader.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="89" column="77" selection-start-line="89" selection-start-column="77" selection-end-line="89" selection-end-column="77" />
           <folding>
-            <element signature="e#22#313#0" expanded="true" />
+            <element signature="e#22#196#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameEngine/src/shaders/StaticShader.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GameEngine/src/renderEngine/Renderer.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+        <state relative-caret-position="126">
+          <caret line="40" column="7" lean-forward="true" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameEngine/src/shaders/vertexShader.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="18" column="61" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameEngine/src/shaders/fragmentShader.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameEngine/src/engineTester/MainGameLoop.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="28" column="60" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="60" />
+          <folding>
+            <element signature="e#22#313#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
