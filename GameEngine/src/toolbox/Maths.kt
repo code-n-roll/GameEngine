@@ -4,8 +4,10 @@ import entities.Camera
 import org.lwjgl.util.vector.Matrix4f
 import org.lwjgl.util.vector.Vector3f
 
+
 object Maths {
 
+    @JvmStatic
     fun createTransformationMatrix(translation: Vector3f,
                                    rx: Float,
                                    ry: Float,
@@ -24,6 +26,7 @@ object Maths {
         return matrix
     }
 
+    @JvmStatic
     fun createViewMatrix(camera: Camera): Matrix4f {
         val viewMatrix = Matrix4f()
         viewMatrix.setIdentity()
@@ -31,6 +34,8 @@ object Maths {
                 Vector3f(1f, 0f, 0f), viewMatrix, viewMatrix)
         Matrix4f.rotate(Math.toRadians(camera.yaw.toDouble()).toFloat(),
                 Vector3f(0f, 1f, 0f), viewMatrix, viewMatrix)
+        Matrix4f.rotate(Math.toRadians(camera.roll.toDouble()).toFloat(),
+                Vector3f(0f, 0f, 1f), viewMatrix, viewMatrix)
         val cameraPos = camera.position
         val negativeCameraPos = Vector3f(-cameraPos.x, -cameraPos.y, -cameraPos.z)
         Matrix4f.translate(negativeCameraPos, viewMatrix, viewMatrix)
