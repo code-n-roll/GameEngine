@@ -56,7 +56,7 @@ class StaticShader : ShaderProgram(VERTEX_FILE, FRAGMENT_FILE) {
 
     companion object {
 
-        private const val VERTEX_FILE = "GameEngine/src/shaders/vertexShader.txt"
-        private const val FRAGMENT_FILE = "GameEngine/src/shaders/fragmentShader.txt"
+        private const val VERTEX_FILE = "GameEngine/src/shaders/vertexShader.glsl"
+        private const val FRAGMENT_FILE = "GameEngine/src/shaders/fragmentShader.glsl"
     }
 }

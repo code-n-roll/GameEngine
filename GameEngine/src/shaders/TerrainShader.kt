@@ -57,7 +57,7 @@ class TerrainShader : ShaderProgram(VERTEX_FILE, FRAGMENT_FILE) {
     }
 
     companion object {
-        private val VERTEX_FILE = "GameEngine/src/shaders/terrainVertexShader.txt"
-        private val FRAGMENT_FILE = "GameEngine/src/shaders/terrainFragmentShader.txt"
+        private val VERTEX_FILE = "GameEngine/src/shaders/terrainVertexShader.glsl"
+        private val FRAGMENT_FILE = "GameEngine/src/shaders/terrainFragmentShader.glsl"
     }
 }
