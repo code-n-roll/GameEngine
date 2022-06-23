@@ -10,5 +10,5 @@ ThinMatrix tutorial for sample GameEngine
 
 
 ## Current progress:
-Rendering terrain with textures supporting navigation by 3 axis XYZ.
+Rendering terrain with textures supporting: navigation by 3 axis XYZ, lightning.
 <img width="1279" alt="image" src="https://user-images.githubusercontent.com/11900227/175321367-97b6fb7b-f5ca-4ad7-ad64-0617867c1d9b.png">
