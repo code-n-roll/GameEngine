@@ -11,6 +11,7 @@ ThinMatrix tutorial for sample GameEngine
 
 ## Current progress (14/54):
 <img width="1279" alt="image" src="https://user-images.githubusercontent.com/11900227/175321367-97b6fb7b-f5ca-4ad7-ad64-0617867c1d9b.png">
+
 1. The Display
 2. VAOs and VBOs
 3. Rendering with Index Buffers
