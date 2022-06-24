@@ -1,5 +1,4 @@
-# Game Engine
-OpenGL 3D Game Tutorial by ThinMatrix
+# OpenGL 3D Game Tutorial by ThinMatrix
 
 ## Setup on IntelliJ IDEA
 1. Edit configurations 
