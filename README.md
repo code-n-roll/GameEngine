@@ -14,7 +14,7 @@
 1. The Display
 2. VAOs and VBOs
 3. Rendering with Index Buffers
-4. Intro to shaders
+4. Introduction to shaders
 5. Coloring using shaders
 6. Texturing
 7. Matrices & Uniform variables
