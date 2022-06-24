@@ -1,5 +1,5 @@
 # Game Engine
-ThinMatrix tutorial for sample Game Engine
+OpenGL 3D Game Tutorial by ThinMatrix
 
 ## Setup on IntelliJ IDEA
 1. Edit configurations 
