@@ -9,6 +9,19 @@ ThinMatrix tutorial for sample GameEngine
 3. mark /src directory as Source Root
 
 
-## Current progress:
-Rendering terrain with textures supporting: navigation by 3 axis XYZ, lightning.
+## Current progress (14/54):
 <img width="1279" alt="image" src="https://user-images.githubusercontent.com/11900227/175321367-97b6fb7b-f5ca-4ad7-ad64-0617867c1d9b.png">
+1. The Display
+2. VAOs and VBOs
+3. Rendering with Index Buffers
+4. Intro to shaders
+5. Coloring using shaders
+6. Texturing
+7. Matrices & Uniform variables
+8. Model, View & Projection Matrices
+9. OBJ File Format
+10. Loading 3D Models
+11. Per-Pixel Lighting
+12. Specular Lighting
+13. Optimizing
+14. Simple Terrain
