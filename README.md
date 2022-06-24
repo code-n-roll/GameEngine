@@ -1,9 +1,9 @@
 # OpenGL 3D Game Tutorial by ThinMatrix
 
-## Setup on IntelliJ IDEA
+## Setup for IntelliJ IDEA
 1. Edit configurations 
-- VM Options: -Djava.library.path=GameEngine/lib/natives/<your_os>/
-- Working directory: <your_path_to_project>/GameEngine
+- Add VM Options: -Djava.library.path=GameEngine/lib/natives/<your_os>/
+- Make working directory: <your_path_to_project>/GameEngine
 2. File -> Project Structure -> Libraries -> Add -> path to GameEngine/lib/jars
 3. mark /src directory as Source Root
 
