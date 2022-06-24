@@ -1,5 +1,5 @@
-# GameEngine
-ThinMatrix tutorial for sample GameEngine
+# Game Engine
+ThinMatrix tutorial for sample Game Engine
 
 ## Setup on IntelliJ IDEA
 1. Edit configurations 
