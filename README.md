@@ -8,8 +8,8 @@
 3. mark /src directory as Source Root
 
 
-## Current progress (14/54):
-<img width="1279" alt="image" src="https://user-images.githubusercontent.com/11900227/175321367-97b6fb7b-f5ca-4ad7-ad64-0617867c1d9b.png">
+## Current progress (15/54):
+<img width="1279" alt="image" src="https://user-images.githubusercontent.com/11900227/175820273-ac80e1d5-f08c-40cf-9d4a-0c7405d2be34.png">
 
 1. The Display
 2. VAOs and VBOs
@@ -25,3 +25,4 @@
 12. Specular Lighting
 13. Optimizing
 14. Simple Terrain
+15. Transparency
