@@ -1,5 +1,8 @@
 # OpenGL 3D Game Tutorial by ThinMatrix
 
+## Video lessons
+https://www.youtube.com/playlist?list=PLRIWtICgwaX0u7Rf9zkZhLoLuZVfUksDP
+
 ## Setup for IntelliJ IDEA
 1. Edit configurations 
 - Add VM Options: -Djava.library.path=GameEngine/lib/natives/<your_os>/
