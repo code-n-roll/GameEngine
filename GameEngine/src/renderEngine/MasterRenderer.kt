@@ -18,6 +18,15 @@ class MasterRenderer {
         private const val FOV = 70f
         private const val NEAR_PLANE = 0.1f
         private const val FAR_PLANE = 1000f
+
+        fun enableCulling() {
+            GL11.glEnable(GL11.GL_CULL_FACE)
+            GL11.glCullFace(GL11.GL_BACK)
+        }
+
+        fun disableCulling() {
+            GL11.glDisable(GL11.GL_CULL_FACE)
+        }
     }
 
     private lateinit var projectionMatrix: Matrix4f
@@ -32,8 +41,7 @@ class MasterRenderer {
     val terrains = arrayListOf<Terrain>()
 
     constructor() {
-        GL11.glEnable(GL11.GL_CULL_FACE)
-        GL11.glCullFace(GL11.GL_BACK)
+        enableCulling()
         createProjectionMatrix()
         renderer = EntityRenderer(shader, projectionMatrix)
         terrainRenderer = TerrainRenderer(terrainShader, projectionMatrix)
